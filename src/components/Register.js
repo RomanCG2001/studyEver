@@ -65,7 +65,7 @@ export function Register() {
         </div>
         <button className="bg-green-500 hover:bg-green-700 text-white text-sm font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline w-full">Registrate ahora</button>
       </form>
-      <p className="my-4 text-sm flex justify-between px-2 text-blue-200">¿Ya tienes una cuenta?<Link to='/Login' className="underline text-blue-100">Inicia sesión</Link></p>
+      <p className="my-4 text-sm flex justify-between px-2 text-green-600">¿Ya tienes una cuenta?<Link to='/Login' className="underline text-green-500">Inicia sesión</Link></p>
     </div>
   );
 }
