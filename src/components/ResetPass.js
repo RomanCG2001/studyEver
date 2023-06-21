@@ -6,24 +6,24 @@ import { Alert } from "./Alert";
 
 var logo = require('../img/Logo.png')
 
-export function Login() {
+export function ResetPass() {
   const [user, setUser] = useState({
     email: "",
     password: "",
   });
 
-  const { login } = useAuth();
+  const { login, resetPassword } = useAuth();
   const navigate = useNavigate();
   const [error, setError] = useState();
 
   const handleChange = ({ target: { name, value } }) => {
     if (name === "email") {
-      const emailRegex = /^[\w.-]+@alumno\.ipn\.mx$/;
-      if (!emailRegex.test(value)) {
-        setError("El correo debe tener la extensión @alumno.ipn.mx");
-        return;
+        const emailRegex = /^[\w.-]+@alumno\.ipn\.mx$/;
+        if (!emailRegex.test(value)) {
+          setError("El correo debe tener la extensión @alumno.ipn.mx");
+          return;
+        }
       }
-    }
     setUser({ ...user, [name]: value });
   };
 
@@ -34,9 +34,18 @@ export function Login() {
       await login(user.email, user.password);
       navigate("/");
     } catch (error) {
-      setError(error.message);
     }
   };
+
+  const handleResetPassword =  async () => {
+    if(!user.email) return setError("Por favor, ingresa tu email")
+    try {
+      await resetPassword(user.email)
+      setError('Te hemos enviado a tu correo un link para recuperar tu contraseña')
+    } catch (error) {
+      setError(error.message)
+    }
+  }
 
   return (
     <div className="w-full max-w-xs m-auto">
@@ -63,32 +72,12 @@ export function Login() {
             onChange={handleChange}
           />
         </div>
-
-        <div className="mb-4">
-          <label
-            htmlFor="password"
-            className="block text-gray-700 text-sm font-bold mb-2"
-          >
-            Contraseña
-          </label>
-          <input
-            type="password"
-            name="password"
-            id="password"
-            placeholder="*********************"
-            className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-            onChange={handleChange}
-          />
-        </div>
-
-      <button className="bg-green-500 hover:bg-green-700 text-white text-sm font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline w-full">
-          Iniciar sesión
+      <button onClick={handleResetPassword} className="bg-green-700 hover:bg-green-500 text-white text-sm font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline w-full">
+          Enviar
         </button>
-        <p><Link to='/ResetPass' className="flex justify-center font-bold text-sm text-green-600 pt-3"
-        >¿Olvidaste tu contraseña?</Link></p>
       </form>
 
-      <p className="my-4 text-sm flex justify-between px-2 text-green-600">¿No tienes una cuenta?<Link to='/Register' className="underline text-green-500">Registrate</Link></p>
+      <p className="my-4 text-sm flex justify-between px-2 text-green-600">¿Recuperaste tu contraseña?<Link to='/Login' className="underline text-green-500">Inicia sesión</Link></p>
     </div>
   );
 }

@@ -3,6 +3,7 @@ import { Home } from "./components/Home";
 import { ProtectedRoutes } from "./components/protectedRoutes";
 import { Login } from "./components/Login";
 import { Register } from "./components/Register";
+import { ResetPass } from "./components/ResetPass";
 import { AuthProvider } from "./context/authContext";
 
 
@@ -21,6 +22,7 @@ function App() {
           />
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
+          <Route path="/resetpass" element={<ResetPass />} />
         </Routes>
       </AuthProvider>
     </div>

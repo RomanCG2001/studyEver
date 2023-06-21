@@ -3,6 +3,7 @@ import { useAuth } from "../context/authContext";
 import { useNavigate, Link } from "react-router-dom";
 import { Alert } from "./Alert";
 
+var logo = require('../img/Logo.png')
 export function Register() {
   const [user, setUser] = useState({
     email: "",
@@ -14,6 +15,13 @@ export function Register() {
   const [error, setError] = useState();
 
   const handleChange = ({ target: { name, value } }) => {
+    if (name === "email") {
+      const emailRegex = /^[\w.-]+@alumno\.ipn\.mx$/;
+      if (!emailRegex.test(value)) {
+        setError("El correo debe tener la extensión @alumno.ipn.mx");
+        return;
+      }
+    }
     setUser({ ...user, [name]: value });
   };
 
@@ -24,11 +32,6 @@ export function Register() {
       await signUp(user.email, user.password);
       navigate("/");
     } catch (error) {
-      //En dado caso que quiera personalizar los mensajes de error de inputs
-      /*console.log(error.code);
-      if (error.code === "auth/internal-error") {
-        setError("Correo invalido");
-      }*/
       setError(error.message);
     }
   };
@@ -37,16 +40,18 @@ export function Register() {
     <div className="w-full max-w-xs m-auto">
       {error && <Alert message={error} />}
 
+      <img className="mb-4" src={logo} alt="logoStudyEver"/>
+
       <form
         onSubmit={handleSubmit}
-        className="bg-white shadow-md rounded px-5 pt-6 pb-6 mb-4"
+        className="bg-green-100 shadow-md rounded px-6 pt-6 pb-6 mb-4"
       >
         <div className="mb-4">
           <label htmlFor="email" className="block text-gray-700 text-sm font-bold my-2">Correo</label>
           <input
             type="email"
             name="email"
-            placeholder="tucorreo@ejemplo.com"
+            placeholder="Correo Institucional"
             onChange={handleChange}
             className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
           />
