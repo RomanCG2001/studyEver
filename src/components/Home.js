@@ -103,7 +103,7 @@ export function Home() {
       <p className="text-xl text-center mx-5 mt-10">
         Descubre miles de ofertas y promociones exclusivas para estudiantes
         universitarios, sigue explorando <b>Study</b>
-        <b className="text-green-500">Ever</b>.
+        <b className="text-green-500">Ever</b>
       </p>
 
       <div className="absolute -translate-x-0 translate-y-[-50%] left-40 mt-10 text-2xl rounded-full p-2  text-black/50 cursor-pointer">
