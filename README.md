@@ -1,6 +1,14 @@
-# Getting Started with Create React App
+# Documentación de la aplicación
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Este proyecto usa las siguientes tecnologías:
+### -> React
+### -> Tailwind css
+### -> Google Firebase
+### -> NPM
+### -> VS Code
+### -> Git
+### -> Github
+### -> Vercel
 
 ## Available Scripts
 
