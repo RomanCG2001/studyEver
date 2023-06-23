@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/static/css/main.63de8824.css",
+    "main.js": "/static/js/main.3a758921.js",
+    "static/media/bg-negocio1.jpg": "/static/media/bg-negocio1.66b3e329c0a29919132f.jpg",
+    "static/media/Negocio1.jpg": "/static/media/Negocio1.e0371f780be9a2b8740b.jpg",
+    "static/media/Logo.png": "/static/media/Logo.2ce74d7c752bdcfcebce.png",
+    "index.html": "/index.html",
+    "main.63de8824.css.map": "/static/css/main.63de8824.css.map",
+    "main.3a758921.js.map": "/static/js/main.3a758921.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.63de8824.css",
+    "static/js/main.3a758921.js"
+  ]
+}
