@@ -121,6 +121,9 @@ export function Home() {
           <p className="text-sm py-2">
           En la compra de cualquier gomiboing, llévate gratis una banderilla de tamarindo.
           </p>
+          <p className="text-sm py-2">
+          Vigencia: 01/07/2023.
+          </p>
           <button className="bg-green-500 hover:bg-green-700 text-white text-sm font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline ">
             <Link to='/Negocio1'>Leer más</Link>
           </button>
@@ -138,6 +141,9 @@ export function Home() {
           <p className="text-sm py-2">
             Ahorra al comprar una Mac o iPad con los precios especiales de Apple
             para la educación.
+          </p>
+          <p className="text-sm py-2">
+          Vigencia: Hasta agotar existencias.
           </p>
           <button className="bg-green-500 hover:bg-green-700 text-white text-sm font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">
             <a href="https://www.apple.com/mx-hed/store" target="_blank">Leer más</a>
@@ -157,6 +163,9 @@ export function Home() {
             ¡Lleva tus clases a otro nivel! Los estudiantes pueden ahorrar hasta
             un 10% de descuento.
           </p>
+          <p className="text-sm py-2">
+          Vigencia: Hasta agotar existencias.
+          </p>
           <button className="bg-green-500 hover:bg-green-700 text-white text-sm font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline ">
           <a href="https://www.samsung.com/mx/students-offers/" target="_blank">Leer más</a>
           </button>
@@ -175,6 +184,9 @@ export function Home() {
             El descuento será de 25% y 50% por ciento para estudiantes y
             maestros, en el servicio de autotransporte federal y ferroviario y
             estará en vigor durante el periodo vacacional.
+          </p>
+          <p className="text-sm py-2">
+          Vigencia: 15/08/2023.
           </p>
           <button className="bg-green-500 hover:bg-green-700 text-white text-sm font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline ">
           <a href="https://www.gob.mx/sct/articulos/descuento-a-estudiantes-y-maestros-que-viajen-durante-las-vacaciones-de-verano-276519#:~:text=El%20descuento%20ser%C3%A1%20de%2050,de%20agosto%20del%20presente%20a%C3%B1o." target="_blank">Leer más</a>
