@@ -1,36 +1,53 @@
-import React from 'react'
-import { Link } from 'react-router-dom';
+import React from "react";
+import { Link } from "react-router-dom";
 
-var logo = require("../img/Logo.png");
+var bgNegocio1 = require("../img/bg-negocio1.jpg");
 
 export function Negocio1() {
   return (
-    <div className="max-w-[auto] h-[auto] w-full py-4 relative">
-      <div className="fixed bg-white top-0">
-        <img className="w-[60%] mx-auto" src={logo} alt="logoStudyEver" />
+    <div className="max-w-[auto] h-[auto] w-full relative">
+      <div className="bg-white mt-0">
+        <img className="w-[100%] mx-auto" src={bgNegocio1} alt="logoStudyEver" />
       </div>
 
-      <div className="grid grid-cols-1 py-5 mt-20">
-      <div className="p-4">
+      <div className="grid grid-cols-1 py-0">
+        <div className="p-4">
           <h2 className="font-semibold text-green-500">Taliboings</h2>
-          <p className="text-sm py-2">¡Lleva tus clases a otro nivel!
-Los estudiantes pueden ahorrar hasta un 10% de descuento.</p>
-          <button className="bg-green-500 hover:bg-green-700 text-white text-sm font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline ">Leer más</button>
+          <p className="text-sm py-2 font-semibold">
+            Te quitan el calor y te quedas el sabor.
+          </p>
+          <p className="text-sm py-2"><b>Categoria:</b> comida.          </p>
+          <p className="text-sm py-2">
+            Negocio orgullosamente politécnico y proveniente del plantel UPIICSA, 
+            reconocido por el Instituto Mexicano de Ejecutivos de Finanzas en su capitulo Universitario,
+            mesas directivas locales en su región CDMX norte.
+          </p>
+          <p className="text-sm py-2">
+            Con un gran historial de ventas, en esta ocasión trae una oferta especial gracias a su indiscutible
+            y delicioso sabor.
+            Cualquier Gomiboing a precio normal por $6 extras banderilla de tamarindo, pero pedido por esta página, será gratis.
+          </p>
+          <p className="font-semibold text-green-500 text-sm py-4">
+            Cualquier Gomiboing a precio normal por $6 extras banderilla de tamarindo, pero pedido por esta página, será gratis.
+          </p>
+          <button className="bg-green-500 hover:bg-green-700 text-white text-sm font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline relative top-1">
+            <a href="https://www.instagram.com/taliboings/?igshid=NGExMmI2YTkyZg" target="_blank">Contactar</a>
+          </button>
         </div>
       </div>
       <div className="relative inset-0 md:inset-y-0 w-full max-w-xs mx-auto text-gray-700"></div>
-      <div className="relative inset-0 md:inset-y-0 w-full max-w-xs mx-auto text-gray-700"></div>
-      <div className="grid grid-cols-1 py-5 mt-20">
+      <div className="absolute top-[82.5%] -translate-x-0 translate-y-[-50%] left-64 py-0">
         <div className="p-4">
           <button className="bg-white border-green-500 border-2 hover:bg-green-700 text-green-500 text-sm font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline ">
-          <Link to='/'>Regresar</Link>
-            </button>
+            <Link to="/">Regresar</Link>
+          </button>
         </div>
       </div>
       <div className="relative inset-0 md:inset-y-0 w-full max-w-xs mx-auto text-gray-700"></div>
-      <footer className="text-xl text-center py-5 mx-5">Copyright © <b>Study</b><b className="text-green-500">Ever</b> 2023.</footer>
-
+      <footer className="text-xl text-center mx-5 mt-10">
+        Copyright ©<b>Study</b>
+        <b className="text-green-500">Ever</b> 2023.
+      </footer>
     </div>
   );
 }
-

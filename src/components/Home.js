@@ -63,6 +63,7 @@ export function Home() {
   };
 
   var logo = require("../img/Logo.png");
+  var negocio1 = require("../img/Negocio1.jpg");
 
   if (loading) return <h1 className="text-white">Cargando</h1>;
 
@@ -111,15 +112,14 @@ export function Home() {
 
       <div className="grid grid-cols-1 py-5 mt-20">
         <img
-          style={{ backgroundImage: `url(${cardImg[0].url})` }}
-          className="w-[390px] h-[200px] align-center bg-center bg-cover mx-auto py-0"
-          alt=""
+          className="w-[390px] h-[340px] align-center bg-center bg-cover mx-auto py-0"
+          src={negocio1} 
+          alt="logoNegocio1"
         />
         <div className="p-4">
-          <h2 className="font-semibold text-green-500">Negocio</h2>
+          <h2 className="font-semibold text-green-500">Taliboings</h2>
           <p className="text-sm py-2">
-            Ahorra al comprar una Mac o iPad con los precios especiales de Apple
-            para la educación.
+          En la compra de cualquier gomiboing, llévate gratis una banderilla de tamarindo.
           </p>
           <button className="bg-green-500 hover:bg-green-700 text-white text-sm font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline ">
             <Link to='/Negocio1'>Leer más</Link>
@@ -183,7 +183,7 @@ export function Home() {
       </div>
       <div className="relative inset-0 md:inset-y-0 w-full max-w-xs mx-auto text-gray-700"></div>
       <footer className="text-xl text-center py-5 mx-5">
-        Copyright © <b>Study</b>
+        Copyright ©<b>Study</b>
         <b className="text-green-500">Ever</b> 2023.
       </footer>
     </div>
