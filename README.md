@@ -16,13 +16,13 @@ Se usó Firebase como una interface de autenticación de usuarios y el almacenam
 que se puede medir el tráfico de usuarios que ingresan a la plataforma y llevar acabo un análisis de tráfico
 de usuarios.
 
-### Diseño
+## Diseño
 
 El diseño está basado en el principio 'Mobile First' por lo qué está dirigido a dispositivos móviles, 
 asi que al ingresar en un dispositivo como pc, tablet o laptop, es posible que se alteren los
 elementos.
 
-### Deploy
+## Deploy
 
 Se realizó en Vercel, el cual nos permite conectar como una aplicación tercera a Github y extraer el repositorio
 del proyecto para producción e iniciar el building del proyecto en muy pocos pasos y generar el dominio.
