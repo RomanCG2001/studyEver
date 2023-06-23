@@ -5,11 +5,11 @@ import { Login } from "./components/Login";
 import { Register } from "./components/Register";
 import { ResetPass } from "./components/ResetPass";
 import { AuthProvider } from "./context/authContext";
-
+import { Negocio1 } from "./pages/Negocio1";
 
 function App() {
   return (
-    <div className= "h-screen text-black flex">
+    <div className="h-screen text-black flex">
       <AuthProvider>
         <Routes>
           <Route
@@ -17,6 +17,14 @@ function App() {
             element={
               <ProtectedRoutes>
                 <Home />
+              </ProtectedRoutes>
+            }
+          />
+          <Route
+            path="/negocio1"
+            element={
+              <ProtectedRoutes>
+                <Negocio1 />
               </ProtectedRoutes>
             }
           />
