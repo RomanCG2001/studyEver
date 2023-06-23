@@ -36,15 +36,15 @@ export function Negocio1() {
         </div>
       </div>
       <div className="relative inset-0 md:inset-y-0 w-full max-w-xs mx-auto text-gray-700"></div>
-      <div className="absolute top-[82.5%] -translate-x-0 translate-y-[-50%] left-64 py-0">
-        <div className="p-4">
+      <div className="py-0">
+        <div className="px-4">
           <button className="bg-white border-green-500 border-2 hover:bg-green-700 text-green-500 text-sm font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline ">
             <Link to="/">Regresar</Link>
           </button>
         </div>
       </div>
       <div className="relative inset-0 md:inset-y-0 w-full max-w-xs mx-auto text-gray-700"></div>
-      <footer className="text-xl text-center mx-5 mt-10">
+      <footer className="text-xl text-center mx-5 mt-4">
         Copyright ©<b>Study</b>
         <b className="text-green-500">Ever</b> 2023.
       </footer>
